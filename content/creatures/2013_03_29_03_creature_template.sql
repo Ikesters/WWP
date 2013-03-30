@@ -1115,7 +1115,11 @@ DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
 (@NPC_ENTRY, 0, 2901, 0, 0, 0),
 (@NPC_ENTRY, 0, 5956, 0, 0, 0),
-(@NPC_ENTRY, 0, 7005, 0, 0, 0);
+(@NPC_ENTRY, 0, 3857, 0, 0, 0),
+(@NPC_ENTRY, 0, 7005, 0, 0, 0),
+(@NPC_ENTRY, 0, 2880, 0, 0, 0),
+(@NPC_ENTRY, 0, 3466, 0, 0, 0),
+(@NPC_ENTRY, 0, 18567, 0, 0, 0);
 
 
 -- Define NPC's Entries
