@@ -1,4 +1,4 @@
-Project-Warcrafted Source
+Project-WWP
 ==================
 
 ####Progress status: 55 / 100% (pending status)
