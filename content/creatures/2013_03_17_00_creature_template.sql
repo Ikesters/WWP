@@ -156,6 +156,28 @@ DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
 (@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
+
+-- Added weapon master trainer
+SET @NPC_ENTRY = 100020;
+DELETE FROM `creature_template` WHERE `entry` IN (@NPC_ENTRY);
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 20124, 0, 0, 0, 'Weapon Master', 'Trainer', NULL, 5271, 80, 80, 0, 35, 35, 81, 1, 1.14286, 1, 1, 85, 112, 0, 206, 2.4, 1500, 0, 1, 0, 2048, 8, 0, 2, 0, 0, 0, 58, 86, 20, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, '', 12340);
+DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
+INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
+(@NPC_ENTRY, 196, 0, 0, 0, 0),
+(@NPC_ENTRY, 197, 0, 0, 0, 0),
+(@NPC_ENTRY, 198, 0, 0, 0, 0),
+(@NPC_ENTRY, 199, 0, 0, 0, 0),
+(@NPC_ENTRY, 200, 0, 0, 0, 0),
+(@NPC_ENTRY, 201, 0, 0, 0, 0),
+(@NPC_ENTRY, 202, 0, 0, 0, 0),
+(@NPC_ENTRY, 227, 0, 0, 0, 0),
+(@NPC_ENTRY, 264, 0, 0, 0, 0),
+(@NPC_ENTRY, 1180, 0, 0, 0, 0),
+(@NPC_ENTRY, 2567, 0, 0, 0, 0),
+(@NPC_ENTRY, 5011, 0, 0, 0, 0);
+
+
 -- Defined NPC's Entries
 SET @NPC_START_QUEST := 100000;
 SET @TRAINER_WARR 	:= 100010;
@@ -168,8 +190,21 @@ SET @TRAINER_ROGUE 	:= 100016;
 SET @TRAINER_HUNT 	:= 100017;
 SET @TRAINER_SHAM 	:= 100018;
 SET @TRAINER_DK 	:= 100019;
+SET @TRAINER_WEAPON := 100020;
 -- Spawn Trainers and Quest Starter
-DELETE FROM `creature` WHERE `id` IN (@NPC_START_QUEST, @TRAINER_WARR, @TRAINER_PRIEST, @TRAINER_PALA, @TRAINER_DRUID, @TRAINER_MAGE, @TRAINER_LOCK, @TRAINER_ROGUE, @TRAINER_HUNT, @TRAINER_SHAM, @TRAINER_DK);
+DELETE FROM `creature` WHERE `id` IN 
+(@NPC_START_QUEST, 
+@TRAINER_WARR,
+@TRAINER_PRIEST,
+@TRAINER_PALA,
+@TRAINER_DRUID,
+@TRAINER_MAGE,
+@TRAINER_LOCK,
+@TRAINER_ROGUE,
+@TRAINER_HUNT,
+@TRAINER_SHAM,
+@TRAINER_DK,
+@TRAINER_WEAPON);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES
 (@NPC_START_QUEST, 0, 1, 1, 0, 0, -909.881, -3490.34, 70.451, 3.12539, 300, 0, 0, 126000000, 0, 0, 0, 0, 0),
 (@NPC_START_QUEST, 0, 1, 1, 0, 0, -3752.63, -760.574, 9.44465, 2.52892, 300, 0, 0, 126000000, 0, 0, 0, 0, 0),
@@ -192,5 +227,8 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@TRAINER_SHAM, 0, 1, 1, 0, 0, -3747.74, -735.78, 8.13668, 2.11744, 300, 0, 0, 12600000, 39940, 0, 0, 0, 0),
 (@TRAINER_SHAM, 0, 1, 1, 0, 0, -922.571, -3482.3, 70.4505, 5.32874, 300, 0, 0, 12600000, 39940, 0, 0, 0, 0),
 (@TRAINER_DK, 0, 1, 1, 0, 0, -3750.94, -737.723, 8.06599, 2.11744, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@TRAINER_DK, 0, 1, 1, 0, 0, -919.221, -3481.74, 70.4505, 4.61011, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
+(@TRAINER_DK, 0, 1, 1, 0, 0, -919.221, -3481.74, 70.4505, 4.61011, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@TRAINER_WEAPON, 0, 1, 1, 0, 0, -3750.54, -758.399, 9.17973, 2.41498, 300, 0, 0, 2671000, 0, 0, 0, 0, 0),
+(@TRAINER_WEAPON, 0, 1, 1, 0, 0, -912.926, -3496.12, 70.451, 2.27914, 300, 0, 0, 2671000, 0, 0, 0, 0, 0);
+
 
