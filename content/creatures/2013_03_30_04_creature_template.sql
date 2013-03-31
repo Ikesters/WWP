@@ -644,6 +644,57 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, '0', '49189', '0', '0', '0'),
 (@NPC_ENTRY, '0', '49191', '0', '0', '0');
 
+
+-- Create Relics Vendor
+SET @NPC_ENTRY := 90220;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 27263, 0, 0, 0, 'Relics Shop', 'Warcrafted WoW', '', 0, 80, 80, 2, 35, 35, 4224, 1, 1.14286, 1.2, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 1000, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: Relics
+DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
+(@NPC_ENTRY, 0, '40711', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40342', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40321', '0', '0', '0'),
+(@NPC_ENTRY, 0, '39757', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47664', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47662', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47661', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45510', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45436', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45145', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42853', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42852', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42851', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42615', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42614', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42613', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40707', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40706', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40705', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40337', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40268', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40191', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47673', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47672', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45254', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45144', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42621', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42620', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42619', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40715', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40714', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40207', '0', '0', '0'),
+(@NPC_ENTRY, 0, '39715', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47667', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47666', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47665', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45255', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45169', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45114', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42608', '0', '0', '0');
+
+
 -- Define NPC's Entries
 SET @VENDOR_GR := 90121; -- general regeants
 SET @VENDOR_V1 := 90211; -- necklace vendor
@@ -655,6 +706,7 @@ SET @VENDOR_V6 := 90216; -- waists vendor
 SET @VENDOR_V7 := 90217; -- boots vendor
 SET @VENDOR_V8 := 90218; -- relentless armors vendor
 SET @VENDOR_V9 := 90219; -- relentless weapons vendor
+SET @VENDOR_V10 := 90220; -- relics vendor
 -- Spawn Vendors
 DELETE FROM `creature` WHERE `id` IN 
 (@VENDOR_GR,
@@ -666,7 +718,8 @@ DELETE FROM `creature` WHERE `id` IN
 @VENDOR_V6,
 @VENDOR_V7,
 @VENDOR_V8,
-@VENDOR_V9);
+@VENDOR_V9,
+@VENDOR_V10);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@VENDOR_GR, 0, 1, 1, 0, 0, -957.211, -3549.77, 56.8657, 1.62861, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
 (@VENDOR_GR, 0, 1, 1, 0, 0, -3778.11, -801.95, 8.67422, 2.81432, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
@@ -687,4 +740,7 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@VENDOR_V8, 0, 1, 1, 0, 0, -3756.71, -770.092, 9.59023, 2.74172, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V8, 0, 1, 1, 0, 0, -957.609, -3507.75, 56.7715, 4.74685, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V9, 0, 1, 1, 0, 0, -3758.16, -773.633, 9.64474, 2.68753, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@VENDOR_V9, 0, 1, 1, 0, 0, -953.542, -3508.02, 57.0157, 4.72563, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
+(@VENDOR_V9, 0, 1, 1, 0, 0, -953.542, -3508.02, 57.0157, 4.72563, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V10, 0, 1, 1, 0, 0, -980.887, -3514.65, 57.6528, 1.59663, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V10, 0, 1, 1, 0, 0, -3760.37, -756.802, 8.37739, 2.92834, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
+
