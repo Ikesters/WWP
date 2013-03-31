@@ -50,10 +50,40 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '44133', '0', '0', '0');
 
 
+-- Create General Regeants Vendor
+SET @NPC_ENTRY := 90121;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 17076, 0, 0, 0, 'General Regeants', 'Trade Goodies', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 0.7, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: Enchant Head & Shoulders Enchants
+DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
+(@NPC_ENTRY, 0, 5565, 0, 0, 0),
+(@NPC_ENTRY, 0, 16583, 0, 0, 0),
+(@NPC_ENTRY, 0, 17020, 0, 0, 0),
+(@NPC_ENTRY, 0, 17021, 0, 0, 0),
+(@NPC_ENTRY, 0, 17026, 0, 0, 0),
+(@NPC_ENTRY, 0, 17028, 0, 0, 0),
+(@NPC_ENTRY, 0, 17029, 0, 0, 0),
+(@NPC_ENTRY, 0, 17030, 0, 0, 0),
+(@NPC_ENTRY, 0, 17031, 0, 0, 0),
+(@NPC_ENTRY, 0, 17032, 0, 0, 0),
+(@NPC_ENTRY, 0, 17033, 0, 0, 0),
+(@NPC_ENTRY, 0, 17034, 0, 0, 0),
+(@NPC_ENTRY, 0, 17035, 0, 0, 0),
+(@NPC_ENTRY, 0, 17036, 0, 0, 0),
+(@NPC_ENTRY, 0, 17037, 0, 0, 0),
+(@NPC_ENTRY, 0, 17038, 0, 0, 0),
+(@NPC_ENTRY, 0, 21177, 0, 0, 0),
+(@NPC_ENTRY, 0, 22147, 0, 0, 0),
+(@NPC_ENTRY, 0, 22148, 0, 0, 0),
+(@NPC_ENTRY, 0, 37201, 0, 0, 0);
+
+
 -- Define NPC's Entries
--- SET @VENDOR_?? := ID;
--- Spawn ?? Vendors
--- DELETE FROM `creature` WHERE `id` IN 
--- (@VENDOR_??);
--- INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
--- (@VENDOR_??, 0, 1, 1, 0, 0, -933.643, -3520.23, 70.9339, 4.72454, 300, 0, 0, 6300000, 0, 0, 0, 0, 0);
+SET @VENDOR_GR := 90121; -- general regeants
+-- Spawn Vendors
+DELETE FROM `creature` WHERE `id` IN (@VENDOR_GR);
+INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
+(@VENDOR_GR, 0, 1, 1, 0, 0, -957.211, -3549.77, 56.8657, 1.62861, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
+(@VENDOR_GR, 0, 1, 1, 0, 0, -3778.11, -801.95, 8.67422, 2.81432, 300, 0, 0, 6300000, 0, 0, 0, 0, 0);
