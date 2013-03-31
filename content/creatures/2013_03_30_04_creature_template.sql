@@ -761,7 +761,6 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '40715', '0', '0', '0'),
 (@NPC_ENTRY, 0, '40714', '0', '0', '0'),
 (@NPC_ENTRY, 0, '40207', '0', '0', '0'),
-(@NPC_ENTRY, 0, '39715', '0', '0', '0'),
 (@NPC_ENTRY, 0, '47667', '0', '0', '0'),
 (@NPC_ENTRY, 0, '47666', '0', '0', '0'),
 (@NPC_ENTRY, 0, '47665', '0', '0', '0'),
