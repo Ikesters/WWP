@@ -21,11 +21,9 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
 (@NPC_ENTRY, 0,'43950', '0', '0', '0'),
-(@NPC_ENTRY, 0,'44115', '0', '0', '0'),
 (@NPC_ENTRY, 0,'44710', '0', '0', '0'),
 (@NPC_ENTRY, 0,'44711', '0', '0', '0'),
 (@NPC_ENTRY, 0,'44713', '0', '0', '0'),
-(@NPC_ENTRY, 0,'45706', '0', '0', '0'),
 (@NPC_ENTRY, 0,'45714', '0', '0', '0'),
 (@NPC_ENTRY, 0,'45715', '0', '0', '0'),
 (@NPC_ENTRY, 0,'45716', '0', '0', '0'),
@@ -36,17 +34,20 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0,'45721', '0', '0', '0'),
 (@NPC_ENTRY, 0,'45722', '0', '0', '0'),
 (@NPC_ENTRY, 0,'45723', '0', '0', '0'),
-(@NPC_ENTRY, 0,'49702', '0', '0', '0'),
-(@NPC_ENTRY, 0,'54637', '0', '0', '0');
+(@NPC_ENTRY, 0,'49702', '0', '0', '0');
 
 -- Define NPC's Entries
-SET @NPC_TD_1 := 91000; -- training dummy 1
-SET @NPC_TD_2 := 91001; -- training dummy 2
+SET @NPC_TD_1 	:= 91000; -- training dummy 1
+SET @NPC_TD_2 	:= 91001; -- training dummy 2
+SET @NPC_RG 	:= 90300; -- reputation give away vendor
 -- Spawn NPCs
-DELETE FROM `creature` WHERE `id` IN (@NPC_TD_1, @NPC_TD_2);
+DELETE FROM `creature` WHERE `id` IN (@NPC_TD_1, @NPC_TD_2, @NPC_RG);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@NPC_TD_1, 0, 1, 1, 0, 0, -988.438, -3500.56, 58.0465, 5.64318, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
 (@NPC_TD_1, 0, 1, 1, 0, 0, -3782.81, -772.334, 8.69119, 5.66201, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
 (@NPC_TD_2, 0, 1, 1, 0, 0, -983.828, -3491.42, 58.0421, 5.92025, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
-(@NPC_TD_2, 0, 1, 1, 0, 0, -3776.8, -763.929, 8.41015, 5.66201, 300, 0, 0, 25200000, 0, 0, 0, 0, 0);
+(@NPC_TD_2, 0, 1, 1, 0, 0, -3776.8, -763.929, 8.41015, 5.66201, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
+(@NPC_RG, 0, 1, 1, 0, 0, -921.523, -3515.35, 70.8918, 1.50762, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
+(@NPC_RG, 0, 1, 1, 0, 0, -3740.34, -755.099, 10.9559, 3.1395, 300, 0, 0, 6300000, 0, 0, 0, 0, 0);
+
 
