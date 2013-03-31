@@ -12,6 +12,33 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 (@NPC_ENTRY, 0, 0, 0, 0, 0, 28047, 0, 0, 0, 'Armored Training Dummy', '20.000 Armor, 20 resistances', '', 0, 80, 80, 2, 7, 7, 0, 1, 1, 1.6, 3, 252, 357, 0, 304, 1, 2000, 0, 1, 131072, 2048, 0, 0, 0, 0, 0, 0, 215, 320, 44, 9, 4, 0, 0, 0, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 2000, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 32, 262144, 'npc_training_dummy', 12340);
 
 
+-- Create Reputation Give Away
+SET @NPC_ENTRY := 90300;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 11157, 0, 0, 0, 'Reputation Give Away', 'Free Reputation', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 1.4, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: Reputation Give Away
+DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
+(@NPC_ENTRY, 0,'43950', '0', '0', '0'),
+(@NPC_ENTRY, 0,'44115', '0', '0', '0'),
+(@NPC_ENTRY, 0,'44710', '0', '0', '0'),
+(@NPC_ENTRY, 0,'44711', '0', '0', '0'),
+(@NPC_ENTRY, 0,'44713', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45706', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45714', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45715', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45716', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45717', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45718', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45719', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45720', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45721', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45722', '0', '0', '0'),
+(@NPC_ENTRY, 0,'45723', '0', '0', '0'),
+(@NPC_ENTRY, 0,'49702', '0', '0', '0'),
+(@NPC_ENTRY, 0,'54637', '0', '0', '0');
+
 -- Define NPC's Entries
 SET @NPC_TD_1 := 91000; -- training dummy 1
 SET @NPC_TD_2 := 91001; -- training dummy 2
