@@ -16,10 +16,6 @@ INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillv
 (@NPC_ENTRY, -200001, 0, 0, 0, 0),
 (@NPC_ENTRY, 71, 0, 0, 0, 0),
 (@NPC_ENTRY, 2458, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added paladin trainer
@@ -32,10 +28,6 @@ INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillv
 (@NPC_ENTRY, -200020, 0, 0, 0, 0),
 (@NPC_ENTRY, -200004, 0, 0, 0, 0),
 (@NPC_ENTRY, -200003, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added priest trainer
@@ -47,10 +39,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200012, 0, 0, 0, 0),
 (@NPC_ENTRY, -200011, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added druid trainer
@@ -62,10 +50,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200006, 0, 0, 0, 0),
 (@NPC_ENTRY, -200005, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added mage trainer
@@ -77,10 +61,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200008, 0, 0, 0, 0),
 (@NPC_ENTRY, -200007, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added warlock trainer
@@ -92,10 +72,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200010, 0, 0, 0, 0),
 (@NPC_ENTRY, -200009, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added rogue trainer
@@ -107,10 +83,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200016, 0, 0, 0, 0),
 (@NPC_ENTRY, -200015, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added hunter trainer
@@ -122,10 +94,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200014, 0, 0, 0, 0),
 (@NPC_ENTRY, -200013, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added shaman trainer
@@ -137,10 +105,6 @@ DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200018, 0, 0, 0, 0),
 (@NPC_ENTRY, -200017, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added death knight trainer
@@ -151,10 +115,6 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 DELETE FROM `npc_trainer` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES
 (@NPC_ENTRY, -200019, 0, 0, 0, 0);
--- Added Irradiation aura
-DELETE FROM `creature_template_addon` WHERE `entry` IN (@NPC_ENTRY);
-INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, '35046');
 
 
 -- Added weapon master trainer
