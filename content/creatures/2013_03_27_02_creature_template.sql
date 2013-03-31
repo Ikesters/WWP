@@ -259,5 +259,6 @@ SET @RAIDING_ENTRY := 90015; -- Raiding trainer entry
 DELETE FROM `creature` WHERE `id` IN (@RAIDING_ENTRY);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@RAIDING_ENTRY, 0, 1, 1, 0, 0, -911.8, -3484.38, 70.451, 4.03451, 300, 0, 0, 9416, 8459, 0, 0, 134250496, 0),
-(@RAIDING_ENTRY, 0, 1, 1, 0, 0, -3754.85, -763.014, 9.57703, 2.29952, 300, 0, 0, 9416, 8459, 0, 0, 134250496, 0);
+(@RAIDING_ENTRY, 0, 1, 1, 0, 0, -3754.31, -755.416, 8.58525, 1.21266, 300, 0, 0, 9416, 8459, 0, 0, 134250496, 0);
+
 

@@ -2,7 +2,7 @@
 SET @NPC_ENTRY = 100000;
 DELETE FROM `creature_template` WHERE `entry` IN (@NPC_ENTRY);
 INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES
-(@NPC_ENTRY, 0, 0, 0, 0, 0, 30417, 0, 0, 0, 'Warcrafted WoW Like', 'Welcome', '', 0, 80, 80, 2, 35, 35, 2, 1, 1.14286, 1, 3, 10, 10, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 10000, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 1);
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 30417, 0, 0, 0, 'Warcrafted WoW Like', 'Welcome', '', 0, 80, 80, 2, 35, 35, 2, 1, 1.14286, 1.2, 3, 10, 10, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 10000, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 1);
 
 
 -- Added warrior trainer
@@ -207,7 +207,7 @@ DELETE FROM `creature` WHERE `id` IN
 @TRAINER_WEAPON);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES
 (@NPC_START_QUEST, 0, 1, 1, 0, 0, -909.881, -3490.34, 70.451, 3.12539, 300, 0, 0, 126000000, 0, 0, 0, 0, 0),
-(@NPC_START_QUEST, 0, 1, 1, 0, 0, -3752.63, -760.574, 9.44465, 2.52892, 300, 0, 0, 126000000, 0, 0, 0, 0, 0),
+(@NPC_START_QUEST, 0, 1, 1, 0, 0, -3752.4, -742.919, 7.74411, 5.09867, 300, 0, 0, 126000000, 0, 0, 0, 0, 0),
 (@TRAINER_WARR, 0, 1, 1, 0, 0, -3761.87, -744.375, 7.99307, 2.11744, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@TRAINER_WARR, 0, 1, 1, 0, 0, -925.421, -3506.73, 70.4505, 6.24028, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@TRAINER_PALA, 0, 1, 1, 0, 0, -3738.2, -730.229, 8.34324, 2.12921, 300, 0, 0, 12600000, 39940, 0, 0, 0, 0),
@@ -228,7 +228,7 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@TRAINER_SHAM, 0, 1, 1, 0, 0, -922.571, -3482.3, 70.4505, 5.32874, 300, 0, 0, 12600000, 39940, 0, 0, 0, 0),
 (@TRAINER_DK, 0, 1, 1, 0, 0, -3750.94, -737.723, 8.06599, 2.11744, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@TRAINER_DK, 0, 1, 1, 0, 0, -919.221, -3481.74, 70.4505, 4.61011, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@TRAINER_WEAPON, 0, 1, 1, 0, 0, -3750.54, -758.399, 9.17973, 2.41498, 300, 0, 0, 2671000, 0, 0, 0, 0, 0),
+(@TRAINER_WEAPON, 0, 1, 1, 0, 0, -3750.31, -755.706, 8.79864, 1.31633, 300, 0, 0, 2671000, 0, 0, 0, 0, 0),
 (@TRAINER_WEAPON, 0, 1, 1, 0, 0, -912.926, -3496.12, 70.451, 2.27914, 300, 0, 0, 2671000, 0, 0, 0, 0, 0);
 
 

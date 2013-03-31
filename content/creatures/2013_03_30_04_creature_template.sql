@@ -1,9 +1,9 @@
--- Create Enchant Head & Shoulders Enchants Vendor
+-- Create Reputation Enchants Vendor
 SET @NPC_ENTRY := 90210;
 DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
-(@NPC_ENTRY, 0, 0, 0, 0, 0, 797, 0, 0, 0, 'Head & Shoulder Enchant Vendor', 'Enchants', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 1.5, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
--- Add Vendor Data: Enchant Head & Shoulders Enchants
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 17285, 0, 0, 0, 'Reputation Enchants', 'Enchants', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 1.2, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: Reputation Enchants
 DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
 (@NPC_ENTRY, 0, '50373', '0', '0', '0'),
@@ -50,12 +50,12 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '44133', '0', '0', '0');
 
 
--- Create General Regeants Vendor
+-- Create General Regeants and Food Vendor
 SET @NPC_ENTRY := 90121;
 DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
-(@NPC_ENTRY, 0, 0, 0, 0, 0, 17076, 0, 0, 0, 'General Regeants', 'Trade Goodies', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 0.7, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
--- Add Vendor Data: Enchant Head & Shoulders Enchants
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 17076, 0, 0, 0, 'General Regeants and Food', 'Trade Goodies', '', 0, 80, 80, 2, 35, 35, 128, 1, 1.14286, 0.7, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 500, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: General Regeants and Food Vendor
 DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
 INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
 (@NPC_ENTRY, 0, 5565, 0, 0, 0),
@@ -77,7 +77,86 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, 21177, 0, 0, 0),
 (@NPC_ENTRY, 0, 22147, 0, 0, 0),
 (@NPC_ENTRY, 0, 22148, 0, 0, 0),
-(@NPC_ENTRY, 0, 37201, 0, 0, 0);
+(@NPC_ENTRY, 0, 37201, 0, 0, 0),
+(@NPC_ENTRY, 0, 5178, 0, 0, 0),
+(@NPC_ENTRY, 0, 5176, 0, 0, 0),
+(@NPC_ENTRY, 0, 5175, 0, 0, 0),
+(@NPC_ENTRY, 0, 5177, 0, 0, 0),
+(@NPC_ENTRY, 0, '45932', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45901', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45279', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44953', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44941', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44940', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44722', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44607', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44072', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44071', '0', '0', '0'),
+(@NPC_ENTRY, 0, '44049', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43492', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43491', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43490', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43488', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43480', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43478', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43268', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43236', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43086', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43015', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43005', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43004', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43001', '0', '0', '0'),
+(@NPC_ENTRY, 0, '43000', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42999', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42998', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42997', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42996', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42995', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42994', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42993', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42942', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42779', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42778', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42777', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42431', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42429', '0', '0', '0'),
+(@NPC_ENTRY, 0, '41731', '0', '0', '0'),
+(@NPC_ENTRY, 0, '41729', '0', '0', '0'),
+(@NPC_ENTRY, 0, '40202', '0', '0', '0'),
+(@NPC_ENTRY, 0, '39520', '0', '0', '0'),
+(@NPC_ENTRY, 0, '38706', '0', '0', '0'),
+(@NPC_ENTRY, 0, '38698', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35953', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35952', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35951', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35950', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35948', '0', '0', '0'),
+(@NPC_ENTRY, 0, '35947', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34769', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34768', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34767', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34766', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34765', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34764', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34763', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34762', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34761', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34760', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34759', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34758', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34757', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34756', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34755', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34754', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34753', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34752', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34751', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34750', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34749', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34748', '0', '0', '0'),
+(@NPC_ENTRY, 0, '34747', '0', '0', '0'),
+(@NPC_ENTRY, 0, '33445', '0', '0', '0'),
+(@NPC_ENTRY, 0, '33444', '0', '0', '0');
 
 
 -- Create Necklace Vendor
@@ -663,10 +742,8 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '45510', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45436', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45145', '0', '0', '0'),
-(@NPC_ENTRY, 0, '42853', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42852', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42851', '0', '0', '0'),
-(@NPC_ENTRY, 0, '42615', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42614', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42613', '0', '0', '0'),
 (@NPC_ENTRY, 0, '40707', '0', '0', '0'),
@@ -679,7 +756,6 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '47672', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45254', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45144', '0', '0', '0'),
-(@NPC_ENTRY, 0, '42621', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42620', '0', '0', '0'),
 (@NPC_ENTRY, 0, '42619', '0', '0', '0'),
 (@NPC_ENTRY, 0, '40715', '0', '0', '0'),
@@ -692,7 +768,38 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 (@NPC_ENTRY, 0, '45255', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45169', '0', '0', '0'),
 (@NPC_ENTRY, 0, '45114', '0', '0', '0'),
-(@NPC_ENTRY, 0, '42608', '0', '0', '0');
+(@NPC_ENTRY, 0, '42853', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42615', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42621', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42608', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42603', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42598', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42589', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42584', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42579', '0', '0', '0');
+
+
+-- Create Shields Vendor
+SET @NPC_ENTRY := 90221;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 27263, 0, 0, 0, 'Shields Shop', 'Warcrafted WoW', '', 0, 80, 80, 2, 35, 35, 4224, 1, 1.14286, 1.2, 3, 20, 20, 0, 0, 1, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 1000, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
+-- Add Vendor Data: Shields
+DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES 
+(@NPC_ENTRY, 0, '47895', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47835', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47812', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47287', '0', '0', '0'),
+(@NPC_ENTRY, 0, '47079', '0', '0', '0'),
+(@NPC_ENTRY, 0, '46963', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45887', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45877', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45587', '0', '0', '0'),
+(@NPC_ENTRY, 0, '45470', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42571', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42565', '0', '0', '0'),
+(@NPC_ENTRY, 0, '42560', '0', '0', '0');
 
 
 -- Define NPC's Entries
@@ -707,6 +814,8 @@ SET @VENDOR_V7 := 90217; -- boots vendor
 SET @VENDOR_V8 := 90218; -- relentless armors vendor
 SET @VENDOR_V9 := 90219; -- relentless weapons vendor
 SET @VENDOR_V10 := 90220; -- relics vendor
+SET @VENDOR_V11 := 90221; -- shields vendor
+SET @VENDOR_V12 := 90210; -- reputation enchants vendor
 -- Spawn Vendors
 DELETE FROM `creature` WHERE `id` IN 
 (@VENDOR_GR,
@@ -719,7 +828,9 @@ DELETE FROM `creature` WHERE `id` IN
 @VENDOR_V7,
 @VENDOR_V8,
 @VENDOR_V9,
-@VENDOR_V10);
+@VENDOR_V10,
+@VENDOR_V11,
+@VENDOR_V12);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@VENDOR_GR, 0, 1, 1, 0, 0, -957.211, -3549.77, 56.8657, 1.62861, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
 (@VENDOR_GR, 0, 1, 1, 0, 0, -3778.11, -801.95, 8.67422, 2.81432, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
@@ -737,10 +848,14 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@VENDOR_V6, 0, 1, 1, 0, 0, -973.214, -3514.55, 57.1724, 1.56987, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V7, 0, 1, 1, 0, 0, -3761, -760.52, 8.46164, 2.90824, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V7, 0, 1, 1, 0, 0, -977.175, -3514.62, 57.6098, 1.64919, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V8, 0, 1, 1, 0, 0, -957.568, -3508.09, 56.8208, 4.74922, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V8, 0, 1, 1, 0, 0, -3756.71, -770.092, 9.59023, 2.74172, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@VENDOR_V8, 0, 1, 1, 0, 0, -957.609, -3507.75, 56.7715, 4.74685, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V9, 0, 1, 1, 0, 0, -3758.16, -773.633, 9.64474, 2.68753, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V9, 0, 1, 1, 0, 0, -953.542, -3508.02, 57.0157, 4.72563, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@VENDOR_V10, 0, 1, 1, 0, 0, -980.887, -3514.65, 57.6528, 1.59663, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@VENDOR_V10, 0, 1, 1, 0, 0, -3760.37, -756.802, 8.37739, 2.92834, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
+(@VENDOR_V10, 0, 1, 1, 0, 0, -3760.37, -756.802, 8.37739, 2.92834, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V11, 0, 1, 1, 0, 0, -3759.78, -777.321, 9.65837, 2.73307, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V11, 0, 1, 1, 0, 0, -961.325, -3508.23, 56.7662, 4.74922, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@VENDOR_V12, 0, 1, 1, 0, 0, -964.989, -3550.4, 57.0121, 1.57406, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
+(@VENDOR_V12, 0, 1, 1, 0, 0, -3776.15, -797.129, 8.70751, 2.91841, 300, 0, 0, 6300000, 0, 0, 0, 0, 0);
 
