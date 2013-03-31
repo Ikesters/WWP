@@ -221,8 +221,10 @@ SET @NPC_TD_2 	:= 91001; -- training dummy 2
 SET @NPC_RG 	:= 90300; -- reputation give away vendor
 SET @NPC_AV_1 	:= 90301; -- arena vendor armors
 SET @NPC_AV_2 	:= 90302; -- arena vendor weapons
+SET @NPC_BM_1 	:= 18895; -- arena battlemastes
+SET @NPC_AG_1 	:= 18897; -- arena organizer
 -- Spawn NPCs
-DELETE FROM `creature` WHERE `id` IN (@NPC_TD_1, @NPC_TD_2, @NPC_RG, @NPC_AV_1, @NPC_AV_2);
+DELETE FROM `creature` WHERE `id` IN (@NPC_TD_1, @NPC_TD_2, @NPC_RG, @NPC_AV_1, @NPC_AV_2, @NPC_BM_1, @NPC_AG_1);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@NPC_TD_1, 0, 1, 1, 0, 0, -988.438, -3500.56, 58.0465, 5.64318, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
 (@NPC_TD_1, 0, 1, 1, 0, 0, -3782.81, -772.334, 8.69119, 5.66201, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
@@ -233,6 +235,11 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@NPC_AV_1, 0, 1, 1, 0, 0, -948.317, -3472.59, 53.4034, 4.62696, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
 (@NPC_AV_1, 0, 1, 1, 0, 0, -3772.65, -729.968, 8.09873, 5.23517, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
 (@NPC_AV_2, 0, 1, 1, 0, 0, -3779.46, -734.019, 8.09425, 5.28229, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
-(@NPC_AV_2, 0, 1, 1, 0, 0, -953.931, -3472.29, 53.4235, 4.65837, 300, 0, 0, 6300000, 0, 0, 0, 0, 0);
+(@NPC_AV_2, 0, 1, 1, 0, 0, -953.931, -3472.29, 53.4235, 4.65837, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
+(@NPC_BM_1, 0, 1, 1, 0, 0, -955.114, -3493.03, 54.3903, 1.57463, 300, 0, 0, 349300, 0, 0, 0, 0, 0),
+(@NPC_BM_1, 0, 1, 1, 0, 0, -3786.04, -752.992, 8.01875, 2.10318, 300, 0, 0, 349300, 0, 0, 0, 0, 0),
+(@NPC_AG_1, 0, 1, 1, 0, 1, -949.65, -3492.72, 54.7385, 2.2108, 300, 0, 0, 6986, 0, 0, 0, 0, 0),
+(@NPC_AG_1, 0, 1, 1, 0, 1, -3782.82, -750.472, 8.01917, 1.65001, 300, 0, 0, 6986, 0, 0, 0, 0, 0);
+
 
 
