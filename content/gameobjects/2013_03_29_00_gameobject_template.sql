@@ -58,6 +58,18 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 5, 7968, 'White light Flow from the Ground', '', '', '', 35, 0, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
+-- Create Bar Beer Tent
+SET @OBJ_ENTRY := 700015;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 5, 7500, 'Bar Beer Tent', '', '', '', 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create Vending Tent 1
+SET @OBJ_ENTRY := 700016;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 5, 6149, 'Vendon Tent 1', '', '', '', 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
 SET @OBJ_TRAVEL_IRONFORGE 		:= 700102;
@@ -120,6 +132,8 @@ SET @OBJ_BIG_TRAM 				:= 194675;
 SET @OBJ_DLR_FIREWORK			:= 191790;
 SET @OBJ_GREEN_FIREFLOW			:= 700013;
 SET @OBJ_WHITE_LIGHTFLOW		:= 700014;
+SET @OBJ_BAR_TENT				:= 700015;
+SET @OBJ_TENT_1					:= 700016;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -148,7 +162,9 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_BIG_TRAM,
 @OBJ_DLR_FIREWORK,
 @OBJ_GREEN_FIREFLOW,
-@OBJ_WHITE_LIGHTFLOW);
+@OBJ_WHITE_LIGHTFLOW,
+@OBJ_BAR_TENT,
+@OBJ_TENT_1);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -258,5 +274,8 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_GREEN_FIREFLOW, 0, 1, 1, -987.912, -3503.01, 57.4322, 2.70405, 0, 0, 0.976165, 0.217032, 300, 0, 1),
 (@OBJ_GREEN_FIREFLOW, 0, 1, 1, -999.318, -3521.67, 58.8633, 5.65637, 0, 0, 0.308304, -0.951288, 300, 0, 1),
 (@OBJ_WHITE_LIGHTFLOW, 0, 1, 1, -917.86, -3488.39, 70.451, 4.67068, 0, 0, 0.721698, -0.692208, 300, 0, 1),
-(@OBJ_WHITE_LIGHTFLOW, 0, 1, 1, -3752.25, -748.351, 8.01355, 3.1242, 0, 0, 0.999962, 0.00869843, 300, 0, 1);
-
+(@OBJ_WHITE_LIGHTFLOW, 0, 1, 1, -3752.25, -748.351, 8.01355, 3.1242, 0, 0, 0.999962, 0.00869843, 300, 0, 1),
+(@OBJ_BAR_TENT, 0, 1, 1, -3732.01, -715.096, 8.28949, 3.65356, 0, 0, 0.967414, -0.253198, 300, 0, 1),
+(@OBJ_BAR_TENT, 0, 1, 1, -1010.77, -3538.31, 56.5735, 0.654946, 0, 0, 0.321651, 0.946858, 300, 0, 1),
+(@OBJ_TENT_1, 0, 1, 1, -3722.51, -747.366, 9.89597, 3.85305, 0, 0, 0.937394, -0.348272, 300, 0, 1),
+(@OBJ_TENT_1, 0, 1, 1, -901.022, -3514.44, 70.8275, 3.62279, 0, 0, 0.971196, -0.238283, 300, 0, 1);
