@@ -70,6 +70,18 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 5, 6149, 'Vendon Tent 1', '', '', '', 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
+-- Create Barbershop
+SET @OBJ_ENTRY := 700017;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 5, 8170, 'Barbershop', '', '', '', 0, 0, 2.25, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create Barber Chair
+SET @OBJ_ENTRY := 700018;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 32, 7896, 'Barber Chair', '', '', '', 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
 SET @OBJ_TRAVEL_IRONFORGE 		:= 700102;
@@ -134,6 +146,8 @@ SET @OBJ_GREEN_FIREFLOW			:= 700013;
 SET @OBJ_WHITE_LIGHTFLOW		:= 700014;
 SET @OBJ_BAR_TENT				:= 700015;
 SET @OBJ_TENT_1					:= 700016;
+SET @OBJ_BARBERSHOP				:= 700017;
+SET @OBJ_BARBERCHAIR			:= 700018;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -164,7 +178,9 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_GREEN_FIREFLOW,
 @OBJ_WHITE_LIGHTFLOW,
 @OBJ_BAR_TENT,
-@OBJ_TENT_1);
+@OBJ_TENT_1,
+@OBJ_BARBERSHOP,
+@OBJ_BARBERCHAIR);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -278,4 +294,8 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_BAR_TENT, 0, 1, 1, -3732.01, -715.096, 8.28949, 3.65356, 0, 0, 0.967414, -0.253198, 300, 0, 1),
 (@OBJ_BAR_TENT, 0, 1, 1, -1010.77, -3538.31, 56.5735, 0.654946, 0, 0, 0.321651, 0.946858, 300, 0, 1),
 (@OBJ_TENT_1, 0, 1, 1, -3722.51, -747.366, 9.89597, 3.85305, 0, 0, 0.937394, -0.348272, 300, 0, 1),
-(@OBJ_TENT_1, 0, 1, 1, -901.022, -3514.44, 70.8275, 3.62279, 0, 0, 0.971196, -0.238283, 300, 0, 1);
+(@OBJ_TENT_1, 0, 1, 1, -901.022, -3514.44, 70.8275, 3.62279, 0, 0, 0.971196, -0.238283, 300, 0, 1),
+(@OBJ_BARBERSHOP, 0, 1, 1, -973.901, -3551.32, 59.0358, 1.60702, 0, 0, 0.719798, 0.694184, 300, 0, 1),
+(@OBJ_BARBERSHOP, 0, 1, 1, -3769.67, -790.085, 10.9869, 5.43249, 0, 0, 0.412635, -0.910896, 300, 0, 1),
+(@OBJ_BARBERCHAIR, 0, 1, 1, -3765.61, -790.074, 9.72284, 5.40471, 0, 0, 0.425251, -0.905076, 300, 0, 1),
+(@OBJ_BARBERCHAIR, 0, 1, 1, -971.476, -3550.36, 57.3399, 1.57072, 0, 0, 0.70708, 0.707134, 300, 0, 1);
