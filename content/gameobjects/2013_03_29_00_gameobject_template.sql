@@ -105,6 +105,7 @@ SET @OBJ_HEAL_BUFF 				:= 180144;
 SET @OBJ_BLUE_STARMARK 			:= 181852;
 SET @OBJ_RED_STARMARK 			:= 181853;
 SET @OBJ_BIG_TRAM 				:= 194675;
+SET @OBJ_DLR_FIREWORK			:= 191790;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -130,7 +131,8 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_HEAL_BUFF,
 @OBJ_BLUE_STARMARK,
 @OBJ_RED_STARMARK,
-@OBJ_BIG_TRAM);
+@OBJ_BIG_TRAM,
+@OBJ_DLR_FIREWORK);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -230,5 +232,9 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_RED_STARMARK, 0, 1, 1, -945.135, -3475.19, 53.532, 4.72594, 0, 0, 0.702301, -0.71188, 300, 0, 1), -- dont change ENTRYID
 (@OBJ_RED_STARMARK, 0, 1, 1, -956.139, -3474.71, 53.5321, 3.40254, 0, 0, 0.9915, -0.130104, 300, 0, 1), -- dont change ENTRYID
 (@OBJ_BIG_TRAM, 0, 1, 1, -3804.68, -729.021, 7.57445, 5.23753, 0, 0, 0.499334, -0.86641, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BIG_TRAM, 0, 1, 1, -968.985, -3490.14, 78.2212, 4.74947, 0, 0, 0.693876, -0.720094, 300, 0, 1); -- dont change ENTRYID
+(@OBJ_BIG_TRAM, 0, 1, 1, -968.985, -3490.14, 78.2212, 4.74947, 0, 0, 0.693876, -0.720094, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -3766.46, -748.471, 7.99072, 2.13302, 0, 0, 0.87552, 0.483182, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -3752.25, -748.351, 8.01306, 3.09121, 0, 0, 0.999683, 0.0251893, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -917.971, -3488.07, 70.4503, 4.54999, 0, 0, 0.76213, -0.647424, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -928.541, -3513.76, 70.1703, 3.14413, 0, 0, 0.999999, -0.00126891, 300, 0, 1); -- dont change ENTRYID
 
