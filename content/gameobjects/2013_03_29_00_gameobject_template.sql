@@ -46,6 +46,18 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 5, 7063, '2D House', '', '', '', 0, 0, 1.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
+-- Create Green Fire Glow
+SET @OBJ_ENTRY := 700013;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 6, 8114, 'Green Fire Glow', '', '', '', 35, 6553600, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create White light Flow from the Ground
+SET @OBJ_ENTRY := 700014;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 5, 7968, 'White light Flow from the Ground', '', '', '', 35, 0, 0.15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
 SET @OBJ_TRAVEL_IRONFORGE 		:= 700102;
@@ -106,6 +118,8 @@ SET @OBJ_BLUE_STARMARK 			:= 181852;
 SET @OBJ_RED_STARMARK 			:= 181853;
 SET @OBJ_BIG_TRAM 				:= 194675;
 SET @OBJ_DLR_FIREWORK			:= 191790;
+SET @OBJ_GREEN_FIREFLOW			:= 700013;
+SET @OBJ_WHITE_LIGHTFLOW		:= 700014;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -132,7 +146,9 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_BLUE_STARMARK,
 @OBJ_RED_STARMARK,
 @OBJ_BIG_TRAM,
-@OBJ_DLR_FIREWORK);
+@OBJ_DLR_FIREWORK,
+@OBJ_GREEN_FIREFLOW,
+@OBJ_WHITE_LIGHTFLOW);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -236,5 +252,11 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_DLR_FIREWORK, 0, 1, 1, -3766.46, -748.471, 7.99072, 2.13302, 0, 0, 0.87552, 0.483182, 300, 0, 1), -- dont change ENTRYID
 (@OBJ_DLR_FIREWORK, 0, 1, 1, -3752.25, -748.351, 8.01306, 3.09121, 0, 0, 0.999683, 0.0251893, 300, 0, 1), -- dont change ENTRYID
 (@OBJ_DLR_FIREWORK, 0, 1, 1, -917.971, -3488.07, 70.4503, 4.54999, 0, 0, 0.76213, -0.647424, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_DLR_FIREWORK, 0, 1, 1, -928.541, -3513.76, 70.1703, 3.14413, 0, 0, 0.999999, -0.00126891, 300, 0, 1); -- dont change ENTRYID
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -928.541, -3513.76, 70.1703, 3.14413, 0, 0, 0.999999, -0.00126891, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_GREEN_FIREFLOW, 0, 1, 1, -3776.52, -764.111, 8.45232, 2.6213, 0, 0, 0.966352, 0.257224, 300, 0, 1),
+(@OBJ_GREEN_FIREFLOW, 0, 1, 1, -3782.84, -772.274, 8.68997, 5.69691, 0, 0, 0.288955, -0.957343, 300, 0, 1),
+(@OBJ_GREEN_FIREFLOW, 0, 1, 1, -987.912, -3503.01, 57.4322, 2.70405, 0, 0, 0.976165, 0.217032, 300, 0, 1),
+(@OBJ_GREEN_FIREFLOW, 0, 1, 1, -999.318, -3521.67, 58.8633, 5.65637, 0, 0, 0.308304, -0.951288, 300, 0, 1),
+(@OBJ_WHITE_LIGHTFLOW, 0, 1, 1, -917.86, -3488.39, 70.451, 4.67068, 0, 0, 0.721698, -0.692208, 300, 0, 1),
+(@OBJ_WHITE_LIGHTFLOW, 0, 1, 1, -3752.25, -748.351, 8.01355, 3.1242, 0, 0, 0.999962, 0.00869843, 300, 0, 1);
 
