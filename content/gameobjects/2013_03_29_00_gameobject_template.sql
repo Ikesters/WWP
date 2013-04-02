@@ -82,6 +82,49 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 32, 7896, 'Barber Chair', '', '', '', 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
+-- Create Heart of Magic
+SET @OBJ_ENTRY := 700019;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 3, 8555, 'Heart of Magic', '', '', '', 0, 20, 7, 44651, 0, 0, 0, 0, 0, 1818, 26860, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 11159);
+
+-- Create Speed Buff
+SET @OBJ_ENTRY := 700020;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 6, 5931, 'Speed Buff', '', '', '', 114, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23451, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create Heal Buff
+SET @OBJ_ENTRY := 700021;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 6, 5991, 'Food Buff', '', '', '', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24379, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create Flag Flare, Alliance
+SET @OBJ_ENTRY := 700022;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 10, 6859, 'Flag Flare, Alliance', '', '', '', 114, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 196608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 1);
+
+-- Create Flag Flare, Horde
+SET @OBJ_ENTRY := 700023;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 10, 6860, 'Flag Flare, Horde', '', '', '', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 11159);
+
+-- Create Tram
+SET @OBJ_ENTRY := 700024;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 11, 8587, 'Tram', '', '', '', 0, 40, 1, 0, 0, 0, 0, 0, 0, 66000, 0, 0, 21393, 21394, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+-- Create Dalaran Firework
+SET @OBJ_ENTRY := 700025;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 10, 6872, 'Dalaran Firework Rocket', '', '', '', 1375, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
+
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
 SET @OBJ_TRAVEL_IRONFORGE 		:= 700102;
@@ -135,13 +178,13 @@ SET @OBJ_TRAVEL_THUNDERBLUFF 	:= 700106;
 SET @OBJ_TRAVEL_UNDERCITY 		:= 700107;
 SET @OBJ_TRAVEL_SHATTRATH 		:= 700108;
 SET @OBJ_TRAVEL_DALARAN 		:= 700109;
-SET @OBJ_MAGIC_HEART 			:= 194159;
-SET @OBJ_SPEED_BUFF 			:= 179871;
-SET @OBJ_HEAL_BUFF 				:= 180144;
-SET @OBJ_BLUE_STARMARK 			:= 181852;
-SET @OBJ_RED_STARMARK 			:= 181853;
-SET @OBJ_BIG_TRAM 				:= 194675;
-SET @OBJ_DLR_FIREWORK			:= 191790;
+SET @OBJ_MAGIC_HEART 			:= 700019;
+SET @OBJ_SPEED_BUFF 			:= 700020;
+SET @OBJ_HEAL_BUFF 				:= 700021;
+SET @OBJ_BLUE_STARMARK 			:= 700022;
+SET @OBJ_RED_STARMARK 			:= 700023;
+SET @OBJ_BIG_TRAM 				:= 700024;
+SET @OBJ_DLR_FIREWORK			:= 700025;
 SET @OBJ_GREEN_FIREFLOW			:= 700013;
 SET @OBJ_WHITE_LIGHTFLOW		:= 700014;
 SET @OBJ_BAR_TENT				:= 700015;
@@ -214,77 +257,77 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_TRAVEL_SHATTRATH, 0, 1, 1, -3743.48, -709.008, 9.54185, 5.24634, 0, 0, 0.49551, -0.868602, 300, 0, 1),
 (@OBJ_TRAVEL_DALARAN, 0, 1, 1, -999.309, -3510.15, 60.6141, 5.97422, 0, 0, 0.153869, -0.988091, 300, 0, 1),
 (@OBJ_TRAVEL_DALARAN, 0, 1, 1, -3817.98, -754.319, 10.2156, 5.27008, 0, 0, 0.485166, -0.874422, 300, 0, 1),
-(@OBJ_MAGIC_HEART, 0, 1, 1, -917.86, -3488.39, 76.5122, 4.67068, 0, 0, 0.721698, -0.692208, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_MAGIC_HEART, 0, 1, 1, -3752.25, -748.351, 15.1321, 3.15954, 0, 0, 0.99996, -0.00897126, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -3774.41, -752.672, 7.99331, 2.15265, 0, 0, 0.880221, 0.474565, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -3780.56, -810.2, 8.92396, 2.83837, 0, 0, 0.988529, 0.151033, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -3828.33, -761.027, 8.11102, 5.21812, 0, 0, 0.507717, -0.861524, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -975.754, -3475.2, 57.0052, 4.66282, 0, 0, 0.724413, -0.689366, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -929.003, -3509.9, 69.486, 4.67461, 0, 0, 0.720336, -0.693625, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_SPEED_BUFF, 0, 1, 1, -985.729, -3550.83, 56.9711, 1.56442, 0, 0, 0.704849, 0.709357, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -942.37, -3488.24, 51.6088, 2.30504, 0, 0, 0.913791, 0.406185, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -966.075, -3502.63, 55.553, 1.29894, 0, 0, 0.604766, 0.796404, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -972.936, -3491.91, 55.3221, 5.78043, 0, 0, 0.248741, -0.96857, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -3807.13, -750.031, 8.07978, 5.27619, 0, 0, 0.482494, -0.875899, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -3752.14, -717.662, 8.20255, 5.26833, 0, 0, 0.485931, -0.873997, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_HEAL_BUFF, 0, 1, 1, -3782.63, -781.95, 8.82883, 5.57856, 0, 0, 0.345071, -0.938576, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3750.75, -761.79, 9.6249, 2.93487, 0, 0, 0.994663, 0.103176, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3755.75, -744.633, 7.86904, 3.19405, 0, 0, 0.999656, -0.0262275, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3749.74, -741.951, 7.65432, 2.96236, 0, 0, 0.995987, 0.0894941, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3747.65, -742.471, 7.83118, 2.99378, 0, 0, 0.99727, 0.0738388, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3735.51, -762.656, 10.5255, 0.31557, 0, 0, 0.157131, 0.987578, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3744.95, -781.358, 10.606, 5.08607, 0, 0, 0.563449, -0.826151, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3752.63, -781.398, 9.96041, 5.56124, 0, 0, 0.353184, -0.935554, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3753.77, -782.891, 9.94053, 5.56124, 0, 0, 0.353184, -0.935554, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3752.89, -791.805, 10.5444, 6.17778, 0, 0, 0.0526806, -0.998611, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3760.66, -801.458, 10.1763, 5.76544, 0, 0, 0.255993, -0.966679, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3759.04, -803.562, 10.3965, 5.68611, 0, 0, 0.294124, -0.955767, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3771.89, -788.668, 8.88933, 5.74894, 0, 0, 0.263957, -0.964535, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3772.46, -790.852, 8.89523, 6.24374, 0, 0, 0.0197209, -0.999806, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3798.54, -812.341, 10.6634, 1.91069, 0, 0, 0.816514, 0.577326, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3783.3, -736.477, 8.09186, 0.607717, 0, 0, 0.299204, 0.954189, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3788.56, -739.633, 8.08782, 0.540958, 0, 0, 0.267193, 0.963643, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3817.97, -754.168, 10.2111, 0.592009, 0, 0, 0.291701, 0.95651, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3769.06, -727.654, 8.10259, 0.73495, 0, 0, 0.35926, 0.933237, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3764.13, -724.726, 8.10519, 2.1251, 0, 0, 0.8736, 0.486644, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3743.42, -708.965, 9.54127, 1.26588, 0, 0, 0.591516, 0.806293, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3791.32, -767.75, 7.55833, 2.45959, 0, 0, 0.94242, 0.334433, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3793.45, -766.674, 6.84408, 2.6363, 0, 0, 0.968254, 0.249967, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3797.27, -772.206, 8.04308, 3.33138, 0, 0, 0.995501, -0.0947504, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3820.35, -778.583, 8.51488, 4.05394, 0, 0, 0.897744, -0.440518, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3818.49, -779.36, 8.57372, 4.21888, 0, 0, 0.858406, -0.512971, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BLUE_STARMARK, 0, 1, 1, -3825.67, -779.301, 8.835, 5.03569, 0, 0, 0.584082, -0.811695, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -911.164, -3487.64, 70.4502, 3.66067, 0, 0, 0.966509, -0.256634, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -911.733, -3493.4, 70.4712, 3.18315, 0, 0, 0.999784, -0.0207758, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -926.295, -3528.25, 73.6878, 2.9593, 0, 0, 0.995849, 0.091018, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -926.422, -3530.65, 72.5745, 3.19492, 0, 0, 0.999645, -0.0266625, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -925.896, -3526.14, 72.3005, 3.4007, 0, 0, 0.99162, -0.129191, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -928.778, -3547.4, 71.9101, 3.25933, 0, 0, 0.998268, -0.0588336, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -950.209, -3546.99, 71.8136, 1.05079, 0, 0, 0.501554, 0.865127, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -950.456, -3518.94, 71.8914, 5.65331, 0, 0, 0.309757, -0.950816, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -929.116, -3518.95, 71.8451, 0.0730538, 0, 0, 0.0365188, 0.999333, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -932.654, -3514.94, 69.3527, 3.10469, 0, 0, 0.99983, 0.0184491, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -932.257, -3512.51, 69.4132, 3.11255, 0, 0, 0.999895, 0.0145225, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -979.399, -3516.13, 58.2413, 2.14746, 0, 0, 0.878986, 0.476847, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -981.595, -3537.21, 56.9332, 3.31378, 0, 0, 0.996296, -0.0859887, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -981.634, -3527.88, 57.097, 1.75084, 0, 0, 0.767813, 0.640675, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -990.763, -3538.03, 57.0299, 2.96428, 0, 0, 0.996073, 0.0885402, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -999.601, -3538.15, 57.1351, 3.16848, 0, 0, 0.99991, -0.013445, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -997.069, -3554.44, 56.9846, 1.48774, 0, 0, 0.67714, 0.735855, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -976.423, -3540.58, 58.0123, 1.40841, 0, 0, 0.647428, 0.762126, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -999.227, -3510.06, 60.5947, 5.6959, 0, 0, 0.28944, -0.957196, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -971.418, -3487.77, 55.7109, 5.30713, 0, 0, 0.468884, -0.88326, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -948.764, -3504.18, 56.2997, 0.737681, 0, 0, 0.360534, 0.932746, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -955.534, -3468.86, 53.5318, 5.61344, 0, 0, 0.328649, -0.944452, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -945.074, -3469.08, 53.5319, 4.23114, 0, 0, 0.855246, -0.518223, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -945.135, -3475.19, 53.532, 4.72594, 0, 0, 0.702301, -0.71188, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_RED_STARMARK, 0, 1, 1, -956.139, -3474.71, 53.5321, 3.40254, 0, 0, 0.9915, -0.130104, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BIG_TRAM, 0, 1, 1, -3804.68, -729.021, 7.57445, 5.23753, 0, 0, 0.499334, -0.86641, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_BIG_TRAM, 0, 1, 1, -968.985, -3490.14, 78.2212, 4.74947, 0, 0, 0.693876, -0.720094, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_DLR_FIREWORK, 0, 1, 1, -3766.46, -748.471, 7.99072, 2.13302, 0, 0, 0.87552, 0.483182, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_DLR_FIREWORK, 0, 1, 1, -3752.25, -748.351, 8.01306, 3.09121, 0, 0, 0.999683, 0.0251893, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_DLR_FIREWORK, 0, 1, 1, -917.971, -3488.07, 70.4503, 4.54999, 0, 0, 0.76213, -0.647424, 300, 0, 1), -- dont change ENTRYID
-(@OBJ_DLR_FIREWORK, 0, 1, 1, -928.541, -3513.76, 70.1703, 3.14413, 0, 0, 0.999999, -0.00126891, 300, 0, 1), -- dont change ENTRYID
+(@OBJ_MAGIC_HEART, 0, 1, 1, -917.86, -3488.39, 76.5122, 4.67068, 0, 0, 0.721698, -0.692208, 300, 0, 1),
+(@OBJ_MAGIC_HEART, 0, 1, 1, -3752.25, -748.351, 15.1321, 3.15954, 0, 0, 0.99996, -0.00897126, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -3774.41, -752.672, 7.99331, 2.15265, 0, 0, 0.880221, 0.474565, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -3780.56, -810.2, 8.92396, 2.83837, 0, 0, 0.988529, 0.151033, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -3828.33, -761.027, 8.11102, 5.21812, 0, 0, 0.507717, -0.861524, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -975.754, -3475.2, 57.0052, 4.66282, 0, 0, 0.724413, -0.689366, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -929.003, -3509.9, 69.486, 4.67461, 0, 0, 0.720336, -0.693625, 300, 0, 1),
+(@OBJ_SPEED_BUFF, 0, 1, 1, -985.729, -3550.83, 56.9711, 1.56442, 0, 0, 0.704849, 0.709357, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -942.37, -3488.24, 51.6088, 2.30504, 0, 0, 0.913791, 0.406185, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -966.075, -3502.63, 55.553, 1.29894, 0, 0, 0.604766, 0.796404, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -972.936, -3491.91, 55.3221, 5.78043, 0, 0, 0.248741, -0.96857, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -3807.13, -750.031, 8.07978, 5.27619, 0, 0, 0.482494, -0.875899, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -3752.14, -717.662, 8.20255, 5.26833, 0, 0, 0.485931, -0.873997, 300, 0, 1),
+(@OBJ_HEAL_BUFF, 0, 1, 1, -3782.63, -781.95, 8.82883, 5.57856, 0, 0, 0.345071, -0.938576, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3750.75, -761.79, 9.6249, 2.93487, 0, 0, 0.994663, 0.103176, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3755.75, -744.633, 7.86904, 3.19405, 0, 0, 0.999656, -0.0262275, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3749.74, -741.951, 7.65432, 2.96236, 0, 0, 0.995987, 0.0894941, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3747.65, -742.471, 7.83118, 2.99378, 0, 0, 0.99727, 0.0738388, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3735.51, -762.656, 10.5255, 0.31557, 0, 0, 0.157131, 0.987578, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3744.95, -781.358, 10.606, 5.08607, 0, 0, 0.563449, -0.826151, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3752.63, -781.398, 9.96041, 5.56124, 0, 0, 0.353184, -0.935554, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3753.77, -782.891, 9.94053, 5.56124, 0, 0, 0.353184, -0.935554, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3752.89, -791.805, 10.5444, 6.17778, 0, 0, 0.0526806, -0.998611, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3760.66, -801.458, 10.1763, 5.76544, 0, 0, 0.255993, -0.966679, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3759.04, -803.562, 10.3965, 5.68611, 0, 0, 0.294124, -0.955767, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3771.89, -788.668, 8.88933, 5.74894, 0, 0, 0.263957, -0.964535, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3772.46, -790.852, 8.89523, 6.24374, 0, 0, 0.0197209, -0.999806, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3798.54, -812.341, 10.6634, 1.91069, 0, 0, 0.816514, 0.577326, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3783.3, -736.477, 8.09186, 0.607717, 0, 0, 0.299204, 0.954189, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3788.56, -739.633, 8.08782, 0.540958, 0, 0, 0.267193, 0.963643, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3817.97, -754.168, 10.2111, 0.592009, 0, 0, 0.291701, 0.95651, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3769.06, -727.654, 8.10259, 0.73495, 0, 0, 0.35926, 0.933237, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3764.13, -724.726, 8.10519, 2.1251, 0, 0, 0.8736, 0.486644, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3743.42, -708.965, 9.54127, 1.26588, 0, 0, 0.591516, 0.806293, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3791.32, -767.75, 7.55833, 2.45959, 0, 0, 0.94242, 0.334433, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3793.45, -766.674, 6.84408, 2.6363, 0, 0, 0.968254, 0.249967, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3797.27, -772.206, 8.04308, 3.33138, 0, 0, 0.995501, -0.0947504, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3820.35, -778.583, 8.51488, 4.05394, 0, 0, 0.897744, -0.440518, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3818.49, -779.36, 8.57372, 4.21888, 0, 0, 0.858406, -0.512971, 300, 0, 1),
+(@OBJ_BLUE_STARMARK, 0, 1, 1, -3825.67, -779.301, 8.835, 5.03569, 0, 0, 0.584082, -0.811695, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -911.164, -3487.64, 70.4502, 3.66067, 0, 0, 0.966509, -0.256634, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -911.733, -3493.4, 70.4712, 3.18315, 0, 0, 0.999784, -0.0207758, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -926.295, -3528.25, 73.6878, 2.9593, 0, 0, 0.995849, 0.091018, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -926.422, -3530.65, 72.5745, 3.19492, 0, 0, 0.999645, -0.0266625, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -925.896, -3526.14, 72.3005, 3.4007, 0, 0, 0.99162, -0.129191, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -928.778, -3547.4, 71.9101, 3.25933, 0, 0, 0.998268, -0.0588336, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -950.209, -3546.99, 71.8136, 1.05079, 0, 0, 0.501554, 0.865127, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -950.456, -3518.94, 71.8914, 5.65331, 0, 0, 0.309757, -0.950816, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -929.116, -3518.95, 71.8451, 0.0730538, 0, 0, 0.0365188, 0.999333, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -932.654, -3514.94, 69.3527, 3.10469, 0, 0, 0.99983, 0.0184491, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -932.257, -3512.51, 69.4132, 3.11255, 0, 0, 0.999895, 0.0145225, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -979.399, -3516.13, 58.2413, 2.14746, 0, 0, 0.878986, 0.476847, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -981.595, -3537.21, 56.9332, 3.31378, 0, 0, 0.996296, -0.0859887, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -981.634, -3527.88, 57.097, 1.75084, 0, 0, 0.767813, 0.640675, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -990.763, -3538.03, 57.0299, 2.96428, 0, 0, 0.996073, 0.0885402, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -999.601, -3538.15, 57.1351, 3.16848, 0, 0, 0.99991, -0.013445, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -997.069, -3554.44, 56.9846, 1.48774, 0, 0, 0.67714, 0.735855, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -976.423, -3540.58, 58.0123, 1.40841, 0, 0, 0.647428, 0.762126, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -999.227, -3510.06, 60.5947, 5.6959, 0, 0, 0.28944, -0.957196, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -971.418, -3487.77, 55.7109, 5.30713, 0, 0, 0.468884, -0.88326, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -948.764, -3504.18, 56.2997, 0.737681, 0, 0, 0.360534, 0.932746, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -955.534, -3468.86, 53.5318, 5.61344, 0, 0, 0.328649, -0.944452, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -945.074, -3469.08, 53.5319, 4.23114, 0, 0, 0.855246, -0.518223, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -945.135, -3475.19, 53.532, 4.72594, 0, 0, 0.702301, -0.71188, 300, 0, 1),
+(@OBJ_RED_STARMARK, 0, 1, 1, -956.139, -3474.71, 53.5321, 3.40254, 0, 0, 0.9915, -0.130104, 300, 0, 1),
+(@OBJ_BIG_TRAM, 0, 1, 1, -3804.68, -729.021, 7.57445, 5.23753, 0, 0, 0.499334, -0.86641, 300, 0, 1),
+(@OBJ_BIG_TRAM, 0, 1, 1, -968.985, -3490.14, 78.2212, 4.74947, 0, 0, 0.693876, -0.720094, 300, 0, 1),
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -3766.46, -748.471, 7.99072, 2.13302, 0, 0, 0.87552, 0.483182, 300, 0, 1),
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -3752.25, -748.351, 8.01306, 3.09121, 0, 0, 0.999683, 0.0251893, 300, 0, 1),
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -917.971, -3488.07, 70.4503, 4.54999, 0, 0, 0.76213, -0.647424, 300, 0, 1),
+(@OBJ_DLR_FIREWORK, 0, 1, 1, -928.541, -3513.76, 70.1703, 3.14413, 0, 0, 0.999999, -0.00126891, 300, 0, 1),
 (@OBJ_GREEN_FIREFLOW, 0, 1, 1, -3776.52, -764.111, 8.45232, 2.6213, 0, 0, 0.966352, 0.257224, 300, 0, 1),
 (@OBJ_GREEN_FIREFLOW, 0, 1, 1, -3782.84, -772.274, 8.68997, 5.69691, 0, 0, 0.288955, -0.957343, 300, 0, 1),
 (@OBJ_GREEN_FIREFLOW, 0, 1, 1, -987.912, -3503.01, 57.4322, 2.70405, 0, 0, 0.976165, 0.217032, 300, 0, 1),
