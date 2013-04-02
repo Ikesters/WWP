@@ -128,7 +128,7 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 SET @OBJ_ENTRY := 700026;
 DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
-(@NPC_ENTRY, 5, 8175, 'Runeforge', '', '', '', 0, 6553632, 2.03, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+(@OBJ_ENTRY, 5, 8175, 'Runeforge', '', '', '', 0, 6553632, 2.03, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
 -- Create Guild Vault
 SET @OBJ_ENTRY := 700027;
@@ -380,10 +380,10 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_RUNEFORGE, 0, 1, 1, -979.752, -3549.04, 56.9374, 1.55029, 0, 0, 0.699819, 0.71432, 300, 0, 1),
 (@OBJ_GUILD_VAULT, 0, 1, 1, -925.489, -3536.45, 75.0846, 3.1041, 0, 0, 0.999824, 0.0187458, 300, 0, 1),
 (@OBJ_GUILD_VAULT, 0, 1, 1, -3728.32, -764.368, 16.6592, 1.15128, 0, 0, 0.544373, 0.838843, 300, 0, 1),
-(OBJ_TELEPORTER, 0, 1, 1, -3770.66, -741.345, 8.25083, 2.09768, 0, 0, 0.866845, 0.498577, 300, 0, 1),
-(OBJ_TELEPORTER, 0, 1, 1, -937.628, -3534.08, 71.1547, 3.17382, 0, 0, 0.99987, -0.0161135, 300, 0, 1),
-(OBJ_TELEPORTER, 0, 1, 1, -13267.2, 119.892, 26.2251, 1.12271, 0, 0, 0.532332, 0.846536, 300, 0, 1),
-(OBJ_TELEPORTER, 0, 1, 1, -13291.2, 132.605, 26.0396, 2.62281, 0, 0, 0.966547, 0.256491, 300, 0, 1),
+(@OBJ_TELEPORTER, 0, 1, 1, -3770.66, -741.345, 8.25083, 2.09768, 0, 0, 0.866845, 0.498577, 300, 0, 1),
+(@OBJ_TELEPORTER, 0, 1, 1, -937.628, -3534.08, 71.1547, 3.17382, 0, 0, 0.99987, -0.0161135, 300, 0, 1),
+(@OBJ_TELEPORTER, 0, 1, 1, -13267.2, 119.892, 26.2251, 1.12271, 0, 0, 0.532332, 0.846536, 300, 0, 1),
+(@OBJ_TELEPORTER, 0, 1, 1, -13291.2, 132.605, 26.0396, 2.62281, 0, 0, 0.966547, 0.256491, 300, 0, 1),
 (@OBJ_VISUAL_TP, 0, 1, 1, -937.628, -3534.08, 70.9341, 3.17382, 0, 0, 0.99987, -0.0161135, 300, 0, 1),
 (@OBJ_VISUAL_TP, 0, 1, 1, -13267.2, 119.892, 26.0048, 1.12271, 0, 0, 0.532332, 0.846536, 300, 0, 1),
 (@OBJ_VISUAL_TP, 0, 1, 1, -3770.66, -741.345, 8.03036, 2.09768, 0, 0, 0.866845, 0.498577, 300, 0, 1),
