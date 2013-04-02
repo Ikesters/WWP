@@ -37,7 +37,7 @@ class obj_server_teleporter : public GameObjectScript
                     player->CLOSE_GOSSIP_MENU();
                     break;
             }
-
+			player->CastSpell(player, 62940, false);
             return true;
         }
 

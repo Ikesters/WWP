@@ -142,6 +142,12 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 10, 8632, 'Teleporter', 'Taxi', '', '', 99, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10389, 1, 0, 0, 0, '', 'obj_server_teleporter', 12340);
 
+-- Create Visual ONLY Teleporter
+SET @OBJ_ENTRY := 800001;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@OBJ_ENTRY, 5, 8244, 'Visual Under Portal', '', '', '', 35, 0, 1, 0, 0, 0, 0, 0, 0, 54640, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
 
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
@@ -212,6 +218,7 @@ SET @OBJ_BARBERCHAIR			:= 700018;
 SET @OBJ_RUNEFORGE				:= 700026;
 SET @OBJ_GUILD_VAULT			:= 700027;
 SET @OBJ_TELEPORTER				:= 800000;
+SET @OBJ_VISUAL_TP				:= 800001;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -247,7 +254,8 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_BARBERCHAIR,
 @OBJ_RUNEFORGE,
 @OBJ_GUILD_VAULT,
-@OBJ_TELEPORTER);
+@OBJ_TELEPORTER,
+@OBJ_VISUAL_TP);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -372,7 +380,12 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_RUNEFORGE, 0, 1, 1, -979.752, -3549.04, 56.9374, 1.55029, 0, 0, 0.699819, 0.71432, 300, 0, 1),
 (@OBJ_GUILD_VAULT, 0, 1, 1, -925.489, -3536.45, 75.0846, 3.1041, 0, 0, 0.999824, 0.0187458, 300, 0, 1),
 (@OBJ_GUILD_VAULT, 0, 1, 1, -3728.32, -764.368, 16.6592, 1.15128, 0, 0, 0.544373, 0.838843, 300, 0, 1),
-(@OBJ_TELEPORTER, 0, 1, 1, -938.53, -3534.08, 70.9345, 3.15104, 0, 0, 0.999989, -0.00472369, 300, 0, 1),
-(@OBJ_TELEPORTER, 0, 1, 1, -13273.3, 168.555, 35.7923, 2.59926, 0, 0, 0.963459, 0.267857, 300, 0, 1),
-(@OBJ_TELEPORTER, 0, 1, 1, -3770.74, -741.183, 8.03224, 2.13695, 0, 0, 0.876467, 0.481462, 300, 0, 1),
-(@OBJ_TELEPORTER, 0, 1, 1, -13250.1, 156.67, 35.7821, 5.94113, 0, 0, 0.170196, -0.98541, 300, 0, 1);
+(OBJ_TELEPORTER, 0, 1, 1, -3770.66, -741.345, 8.25083, 2.09768, 0, 0, 0.866845, 0.498577, 300, 0, 1),
+(OBJ_TELEPORTER, 0, 1, 1, -937.628, -3534.08, 71.1547, 3.17382, 0, 0, 0.99987, -0.0161135, 300, 0, 1),
+(OBJ_TELEPORTER, 0, 1, 1, -13267.2, 119.892, 26.2251, 1.12271, 0, 0, 0.532332, 0.846536, 300, 0, 1),
+(OBJ_TELEPORTER, 0, 1, 1, -13291.2, 132.605, 26.0396, 2.62281, 0, 0, 0.966547, 0.256491, 300, 0, 1),
+(@OBJ_VISUAL_TP, 0, 1, 1, -937.628, -3534.08, 70.9341, 3.17382, 0, 0, 0.99987, -0.0161135, 300, 0, 1),
+(@OBJ_VISUAL_TP, 0, 1, 1, -13267.2, 119.892, 26.0048, 1.12271, 0, 0, 0.532332, 0.846536, 300, 0, 1),
+(@OBJ_VISUAL_TP, 0, 1, 1, -3770.66, -741.345, 8.03036, 2.09768, 0, 0, 0.866845, 0.498577, 300, 0, 1),
+(@OBJ_VISUAL_TP, 0, 1, 1, -13291.2, 132.605, 25.8188, 2.62281, 0, 0, 0.966547, 0.256491, 300, 0, 1);
+
