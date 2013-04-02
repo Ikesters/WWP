@@ -229,6 +229,33 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 (@NPC_ENTRY, 0, 0, 0, 0, 0, 11899, 0, 0, 0, 'Banker', 'Deposit', '', 0, 80, 80, 2, 35, 35, 131072, 1, 1, 1.8, 3, 252, 357, 0, 304, 1, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 215, 320, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 1000, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
 
 
+-- Guild Master + tabby vendor
+SET @NPC_ENTRY := 91004;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 2974, 0, 0, 0, 'Guild Maintainer', 'Guild Master', NULL, 708, 50, 50, 0, 35, 35, 790657, 1, 1.14286, 1.5, 0, 85, 112, 0, 206, 1, 2000, 0, 1, 512, 2048, 8, 0, 0, 0, 0, 0, 58, 86, 20, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 1.25, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, '', 12340);
+-- Add vendor data: Guild tabard vendor
+DELETE FROM `npc_vendor` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `ExtendedCost`) VALUES
+(@NPC_ENTRY, 0, 5976, 0, 0, 0),
+(@NPC_ENTRY, 0, 15196, 0, 0, 1007),
+(@NPC_ENTRY, 0, 15198, 0, 0, 1006),
+(@NPC_ENTRY, 0, 19032, 0, 0, 1003),
+(@NPC_ENTRY, 0, 19506, 0, 0, 2969),
+(@NPC_ENTRY, 0, 23999, 0, 0, 0),
+(@NPC_ENTRY, 0, 31774, 0, 0, 0),
+(@NPC_ENTRY, 0, 31775, 0, 0, 1994),
+(@NPC_ENTRY, 0, 31776, 0, 0, 0),
+(@NPC_ENTRY, 0, 31777, 0, 0, 0),
+(@NPC_ENTRY, 0, 31778, 0, 0, 0),
+(@NPC_ENTRY, 0, 31779, 0, 0, 0),
+(@NPC_ENTRY, 0, 31780, 0, 0, 0),
+(@NPC_ENTRY, 0, 31781, 0, 0, 0),
+(@NPC_ENTRY, 0, 31804, 0, 0, 0),
+(@NPC_ENTRY, 0, 32445, 0, 0, 0),
+(@NPC_ENTRY, 0, 32828, 0, 0, 1958),
+(@NPC_ENTRY, 0, 35221, 0, 0, 0);
+
 -- Create Arena Battlemaster
 SET @NPC_ENTRY := 90020;
 DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
@@ -244,15 +271,16 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 
 
 -- Define NPC's Entries
-SET @NPC_TD_1 	:= 91000; -- training dummy 1
-SET @NPC_TD_2 	:= 91001; -- training dummy 2
-SET @NPC_RG 	:= 90300; -- reputation give away vendor
-SET @NPC_AV_1 	:= 90301; -- arena vendor armors
-SET @NPC_AV_2 	:= 90302; -- arena vendor weapons
-SET @NPC_BM_1 	:= 90020; -- arena battlemaster
-SET @NPC_AO_1 	:= 90021; -- arena organizer
-SET @NPC_AUC_1 	:= 91002; -- auctioneer
-SET @NPC_BANK_1 := 91003; -- banker
+SET @NPC_TD_1 			:= 91000; -- training dummy 1
+SET @NPC_TD_2 			:= 91001; -- training dummy 2
+SET @NPC_RG 			:= 90300; -- reputation give away vendor
+SET @NPC_AV_1 			:= 90301; -- arena vendor armors
+SET @NPC_AV_2 			:= 90302; -- arena vendor weapons
+SET @NPC_BM_1 			:= 90020; -- arena battlemaster
+SET @NPC_AO_1 			:= 90021; -- arena organizer
+SET @NPC_AUC_1 			:= 91002; -- auctioneer
+SET @NPC_BANK_1 		:= 91003; -- banker
+SET @NPC_GUILD_MASTER 	:= 91004; -- guild creator
 -- Spawn NPCs
 DELETE FROM `creature` WHERE `id` IN 
 (@NPC_TD_1,
@@ -263,7 +291,8 @@ DELETE FROM `creature` WHERE `id` IN
 @NPC_BM_1,
 @NPC_AG_1,
 @NPC_AUC_1,
-@NPC_BANK_1);
+@NPC_BANK_1,
+@NPC_GUILD_MASTER);
 INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (@NPC_TD_1, 0, 1, 1, 0, 0, -3782.81, -772.334, 8.69119, 5.66201, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
 (@NPC_TD_1, 0, 1, 1, 0, 0, -999.282, -3521.71, 58.8392, 5.6299, 300, 0, 0, 25200000, 0, 0, 0, 0, 0),
@@ -282,5 +311,7 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@NPC_AUC_1, 0, 1, 1, 0, 0, -3721.84, -745.465, 9.89664, 3.22002, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@NPC_AUC_1, 0, 1, 1, 0, 0, -900.201, -3512.75, 70.7754, 2.93338, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@NPC_BANK_1, 0, 1, 1, 0, 0, -1009.82, -3537.58, 56.6471, 0.720363, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
-(@NPC_BANK_1, 0, 1, 1, 0, 0, -3732.48, -715.687, 8.29725, 3.66141, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
+(@NPC_BANK_1, 0, 1, 1, 0, 0, -3732.48, -715.687, 8.29725, 3.66141, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
+(@NPC_GUILD_MASTER, 0, 1, 1, 0, 0, -927.492, -3533.47, 70.8167, 3.32059, 300, 0, 0, 2769, 0, 0, 0, 0, 0),
+(@NPC_GUILD_MASTER, 0, 1, 1, 0, 0, -3730.42, -760.653, 9.93334, 1.07981, 300, 0, 0, 2769, 0, 0, 0, 0, 0);
 
