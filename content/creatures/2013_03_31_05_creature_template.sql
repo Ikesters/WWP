@@ -222,14 +222,28 @@ INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entr
 (@NPC_ENTRY, 0, 0, 0, 0, 0, 3037, 0, 0, 0, 'Auctioneer', 'Auction House', '', 0, 80, 80, 2, 35, 35, 2097152, 1, 1, 1.8, 3, 252, 357, 0, 304, 1, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 215, 320, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 1, 1000, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, '', 12340);
 
 
+-- Create Arena Battlemaster
+SET @NPC_ENTRY := 90020;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 20291, 0, 0, 0, 'Ear-Biter', 'Arena Battlemaster', NULL, 8218, 70, 70, 1, 35, 35, 1048577, 1, 1.14286, 1, 1, 252, 357, 0, 304, 4.6, 2000, 0, 1, 576, 2048, 8, 0, 0, 0, 0, 0, 215, 320, 44, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 3, 1, 50, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, '', 12340);
+
+
+-- Create Arena Organizer
+SET @NPC_ENTRY := 90021;
+DELETE FROM `creature_template` WHERE `entry`=@NPC_ENTRY;
+INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `modelid1`, `modelid2`, `modelid3`, `modelid4`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `Health_mod`, `Mana_mod`, `Armor_mod`, `RacialLeader`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 0, 0, 0, 0, 0, 18290, 0, 0, 0, '"King" Dond', 'Arena Organizer', NULL, 8494, 70, 70, 1, 35, 35, 262145, 1, 1.14286, 1, 0, 252, 357, 0, 304, 1, 1500, 0, 1, 512, 2048, 8, 0, 0, 0, 0, 0, 215, 320, 44, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 3, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, '', 12340);
+
+
 -- Define NPC's Entries
 SET @NPC_TD_1 	:= 91000; -- training dummy 1
 SET @NPC_TD_2 	:= 91001; -- training dummy 2
 SET @NPC_RG 	:= 90300; -- reputation give away vendor
 SET @NPC_AV_1 	:= 90301; -- arena vendor armors
 SET @NPC_AV_2 	:= 90302; -- arena vendor weapons
-SET @NPC_BM_1 	:= 18895; -- arena battlemastes
-SET @NPC_AG_1 	:= 18897; -- arena organizer
+SET @NPC_BM_1 	:= 90020; -- arena battlemaster
+SET @NPC_AO_1 	:= 90021; -- arena organizer
 SET @NPC_AUC_1 	:= 91002; -- auctioneer
 -- Spawn NPCs
 DELETE FROM `creature` WHERE `id` IN 
@@ -254,8 +268,8 @@ INSERT INTO `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equip
 (@NPC_AV_2, 0, 1, 1, 0, 0, -953.931, -3472.29, 53.4235, 4.65837, 300, 0, 0, 6300000, 0, 0, 0, 0, 0),
 (@NPC_BM_1, 0, 1, 1, 0, 0, -955.114, -3493.03, 54.3903, 1.57463, 300, 0, 0, 349300, 0, 0, 0, 0, 0),
 (@NPC_BM_1, 0, 1, 1, 0, 0, -3786.04, -752.992, 8.01875, 2.10318, 300, 0, 0, 349300, 0, 0, 0, 0, 0),
-(@NPC_AG_1, 0, 1, 1, 0, 1, -949.65, -3492.72, 54.7385, 2.2108, 300, 0, 0, 6986, 0, 0, 0, 0, 0),
-(@NPC_AG_1, 0, 1, 1, 0, 1, -3782.82, -750.472, 8.01917, 1.65001, 300, 0, 0, 6986, 0, 0, 0, 0, 0),
+(@NPC_AO_1, 0, 1, 1, 0, 1, -949.65, -3492.72, 54.7385, 2.2108, 300, 0, 0, 6986, 0, 0, 0, 0, 0),
+(@NPC_AO_1, 0, 1, 1, 0, 1, -3782.82, -750.472, 8.01917, 1.65001, 300, 0, 0, 6986, 0, 0, 0, 0, 0),
 (@NPC_AUC_1, 0, 1, 1, 0, 0, -3721.84, -745.465, 9.89664, 3.22002, 300, 0, 0, 12600000, 0, 0, 0, 0, 0),
 (@NPC_AUC_1, 0, 1, 1, 0, 0, -900.201, -3512.75, 70.7754, 2.93338, 300, 0, 0, 12600000, 0, 0, 0, 0, 0);
 
