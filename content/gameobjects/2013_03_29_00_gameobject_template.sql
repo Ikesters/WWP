@@ -124,6 +124,12 @@ DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
 (@OBJ_ENTRY, 10, 6872, 'Dalaran Firework Rocket', '', '', '', 1375, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
 
+-- Create Runeforge
+SET @OBJ_ENTRY := 700026;
+DELETE FROM `gameobject_template` WHERE `entry`=@OBJ_ENTRY;
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `faction`, `flags`, `size`, `questItem1`, `questItem2`, `questItem3`, `questItem4`, `questItem5`, `questItem6`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `AIName`, `ScriptName`, `WDBVerified`) VALUES 
+(@NPC_ENTRY, 5, 8175, 'Runeforge', '', '', '', 0, 6553632, 2.03, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 12340);
+
 
 SET @OBJ_TRAVEL_STORMWIND 		:= 700100;
 SET @OBJ_TRAVEL_EXODAR 			:= 700101;
@@ -191,6 +197,7 @@ SET @OBJ_BAR_TENT				:= 700015;
 SET @OBJ_TENT_1					:= 700016;
 SET @OBJ_BARBERSHOP				:= 700017;
 SET @OBJ_BARBERCHAIR			:= 700018;
+SET @OBJ_RUNEFORGE				:= 700026;
 -- Spawn Objects:
 DELETE FROM `gameobject` WHERE `id` IN 
 (@OBJ_ENTRY_ANVIL_1,
@@ -223,7 +230,8 @@ DELETE FROM `gameobject` WHERE `id` IN
 @OBJ_BAR_TENT,
 @OBJ_TENT_1,
 @OBJ_BARBERSHOP,
-@OBJ_BARBERCHAIR);
+@OBJ_BARBERCHAIR,
+@OBJ_RUNEFORGE);
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES 
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -958.443, -3535.74, 56.7498, 0.0300608, 0, 0, 0.0150298, 0.999887, 300, 0, 1),
 (@OBJ_ENTRY_ANVIL_1, 0, 1, 1, -3788.47, -786.323, 9.0978, 4.16092, 0, 0, 0.872908, -0.487886, 300, 0, 1),
@@ -341,4 +349,8 @@ INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `
 (@OBJ_BARBERSHOP, 0, 1, 1, -973.901, -3551.32, 59.0358, 1.60702, 0, 0, 0.719798, 0.694184, 300, 0, 1),
 (@OBJ_BARBERSHOP, 0, 1, 1, -3769.67, -790.085, 10.9869, 5.43249, 0, 0, 0.412635, -0.910896, 300, 0, 1),
 (@OBJ_BARBERCHAIR, 0, 1, 1, -3765.61, -790.074, 9.72284, 5.40471, 0, 0, 0.425251, -0.905076, 300, 0, 1),
-(@OBJ_BARBERCHAIR, 0, 1, 1, -971.476, -3550.36, 57.3399, 1.57072, 0, 0, 0.70708, 0.707134, 300, 0, 1);
+(@OBJ_BARBERCHAIR, 0, 1, 1, -971.476, -3550.36, 57.3399, 1.57072, 0, 0, 0.70708, 0.707134, 300, 0, 1),
+(@OBJ_RUNEFORGE, 0, 1, 1, -3756.86, -719.901, 8.1727, 5.22746, 0, 0, 0.50369, -0.863884, 300, 0, 1),
+(@OBJ_RUNEFORGE, 0, 1, 1, -3832.92, -773.025, 8.07854, 0.474224, 0, 0, 0.234897, 0.97202, 300, 0, 1),
+(@OBJ_RUNEFORGE, 0, 1, 1, -969.874, -3469.34, 55.4125, 6.20614, 0, 0, 0.0385138, -0.999258, 300, 0, 1),
+(@OBJ_RUNEFORGE, 0, 1, 1, -979.752, -3549.04, 56.9374, 1.55029, 0, 0, 0.699819, 0.71432, 300, 0, 1);
