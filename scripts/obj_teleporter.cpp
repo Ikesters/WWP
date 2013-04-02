@@ -26,7 +26,7 @@ class obj_server_teleporter : public GameObjectScript
 				case MAIN_MALL:
 					{
 						if(player->GetTeamId() == 0) // -- ALLY
-						{ player->TeleportTo(0, -3572.250f, -748.351f, 8.013f, 3.980f); }
+						{ player->TeleportTo(0, -3752.250f, -748.351f, 8.013f, 3.980f); }
 						if(player->GetTeamId() == 1) // -- HORDE
 						{ player->TeleportTo(0, -917.859f, -3488.389f, 70.450f, 4.670f); }
 						player->CLOSE_GOSSIP_MENU();
