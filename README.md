@@ -1,6 +1,6 @@
 Project-WWP
 ==================
 
-####Progress status: 95 / 100% (pending status)
+####100% Finished
 
 This project's content is a property.
